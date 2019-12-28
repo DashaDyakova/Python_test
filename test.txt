@@ -1,0 +1,11 @@
+def sumnum(num: int, sum:int):
+    if num == 0:
+        return sum
+    else:
+        sum += num % 10
+        return sumnum(num // 10, sum)
+
+
+sum = 0
+num = int(input())
+print(sumnum(num, sum))
