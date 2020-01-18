@@ -1,0 +1,10 @@
+def sumnum():
+    num1 = input()
+    num2 = input()
+    if num1.isdigit()==True and num2.isdigit()==True:
+        return int(num1)+int(num2)
+    else:
+        return sumnum()
+
+
+print(sumnum())
