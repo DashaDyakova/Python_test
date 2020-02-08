@@ -1,0 +1,21 @@
+def quiksort(massiv):
+    q = massiv[len(massiv) // 2]
+    massiv_mal = []
+    massiv_rav = []
+    massiv_bol = []
+    for item in massiv:
+        if item > q:
+            massiv_bol.append(item)
+        elif item < q:
+            massiv_mal.append(item)
+        elif item == q:
+            massiv_rav.append(item)
+    if len(massiv_mal) > 1:
+        massiv_mal = quiksort(massiv_mal)
+    if len(massiv_bol) > 1:
+        massiv_bol = quiksort(massiv_bol)
+    return massiv_mal+massiv_rav+massiv_bol
+
+
+mas = input()
+print(quiksort(mas))
